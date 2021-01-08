@@ -23,20 +23,15 @@
                 <th>Expiration Date</th>
                 <th>Size</th>
                 <th>Type</th>
-                <th>Options</th>
               </tr>
               </thead>
               <tbody>
               <% @keys.each do |key| %>
                 <tr>
                   <td><%= link_to (key[:key]).truncate(45), key_path(key: key[:key]), title: "Show #{key[:key]}" %></td>
-                  <td><%= expiry(key[:expiry]) %></td>
+                  <td><%= key[:key].split(':')[1] %></td>
                   <td><code><%= number_to_human_size(key[:memory]) %></code></td>
                   <td><kbd class="bg-dark"><%= key[:type] %></kbd></td>
-                  <td>
-                    <%= link_to 'Edit', edit_key_path(key: key[:key]), title: "Edit #{key[:key]}", class: 'btn btn-sm btn-primary' %>
-                    <%= link_to 'Delete', destroy_key_path(key: key[:key]), method: :delete, data: {confirm: 'Are you sure ?'}, title: "Delete #{key[:key]}", class: 'btn btn-sm btn-danger ml-2' %>
-                  </td>
                 </tr>
               <% end %>
               </tbody>
