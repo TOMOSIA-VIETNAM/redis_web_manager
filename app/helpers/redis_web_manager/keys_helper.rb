@@ -2,6 +2,16 @@
 
 module RedisWebManager
   module KeysHelper
+
+    def count_key(keys)
+      sum = 0
+      keys.map do |key|
+        if key[:key].scan('imps').present?
+          sum += 1
+        end
+      end
+      sum
+    end
     def types_filters
       [%w[All all],
        %w[String string],

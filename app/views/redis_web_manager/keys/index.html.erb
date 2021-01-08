@@ -19,6 +19,18 @@
             <table class="table mb-0">
               <thead>
               <tr>
+                <th>Total key:</th>
+                <td><%= @total_keys.count %></td>
+                <th>Total Imps:</th>
+                <td><%= count_key(@total_keys) %></td>
+              </tr>
+              <tr>
+                <th>Total key / page:</th>
+                <td><%= @keys.count %></td>
+                <th>Total Imps / page:</th>
+                <td><%= count_key(@keys) %></td>
+              </tr>
+              <tr>
                 <th>Name</th>
                 <th>Expiration Date</th>
                 <th>Size</th>

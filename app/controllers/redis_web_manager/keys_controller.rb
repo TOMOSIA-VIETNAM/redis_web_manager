@@ -12,6 +12,7 @@ module RedisWebManager
     def index
       @status = info.status
       @url = connection.id
+      @total_keys = keys
       @pagy, @keys = pagy_array(keys)
     end
 
