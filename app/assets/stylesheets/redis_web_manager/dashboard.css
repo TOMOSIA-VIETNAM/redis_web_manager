@@ -26,3 +26,8 @@
         -webkit-box-shadow: 0 0 15px #6c757d;
     }
 }
+
+.dashboard-container{
+    width: 80% !important;
+    margin: 0 auto !important;
+}

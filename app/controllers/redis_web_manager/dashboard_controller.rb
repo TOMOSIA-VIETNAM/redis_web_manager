@@ -24,7 +24,13 @@ module RedisWebManager
                                                  :connected_clients,
                                                  :blocked_clients,
                                                  :uptime_in_days,
-                                                 :used_memory_human)
+                                                 :used_memory_human,
+                                                 :total_system_memory,
+                                                 :used_memory_dataset_perc,
+                                                 :total_system_memory_human,
+                                                 :used_cpu_sys,
+                                                 :used_cpu_user
+                                                )
     end
 
     def keys_by_type(keys, value)
